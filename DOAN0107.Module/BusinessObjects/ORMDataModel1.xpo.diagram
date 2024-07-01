@@ -95,11 +95,7 @@
         </associationConnectorReferencesSourceCollectionField>
       </sourceCollectionField>
     </simpleAssociationConnector>
-<<<<<<< HEAD
     <simpleAssociationConnector Id="32e2cc56-c1f4-412f-9711-9e95a9068ad0" edgePoints="[(10.625 : 3.84868733723958); (8.23704009735076 : 3.84868733723958); (8.23704009735076 : 2.88967610677083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
-=======
-    <simpleAssociationConnector Id="32e2cc56-c1f4-412f-9711-9e95a9068ad0" edgePoints="[(10.625 : 1.59868733723958); (9 : 1.59868733723958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
->>>>>>> duyen
       <simpleAssociationMoniker Id="1295a7a7-2b41-48e0-8043-c9f7a1551348" />
       <relativeChildShapes />
       <nodes>
@@ -112,11 +108,7 @@
         </associationConnectorReferencesSourceCollectionField>
       </sourceCollectionField>
     </simpleAssociationConnector>
-<<<<<<< HEAD
     <simpleAssociationConnector Id="d141496d-95c3-454c-a94d-b7d10b18e5e3" edgePoints="[(9 : 1.72368733723958); (10.625 : 1.72368733723958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
-=======
-    <simpleAssociationConnector Id="d141496d-95c3-454c-a94d-b7d10b18e5e3" edgePoints="[(8.25 : 2.88967610677083); (8.25 : 3.55834219751603); (10.625 : 3.55834219751603)]" fixedFrom="Algorithm" fixedTo="NotFixed">
->>>>>>> duyen
       <simpleAssociationMoniker Id="0d65a40d-9b5b-4586-8499-615a28e3a08c" />
       <relativeChildShapes />
       <nodes>
@@ -142,11 +134,7 @@
         </associationConnectorReferencesSourceCollectionField>
       </sourceCollectionField>
     </simpleAssociationConnector>
-<<<<<<< HEAD
     <simpleAssociationConnector Id="b5203954-0e06-4f20-af53-fb554565649b" edgePoints="[(10.75 : 8.87307823303158); (9 : 8.87307823303158)]" fixedFrom="NotFixed" fixedTo="NotFixed">
-=======
-    <simpleAssociationConnector Id="b5203954-0e06-4f20-af53-fb554565649b" edgePoints="[(10.75 : 8.82463948567708); (9 : 8.82463948567708)]" fixedFrom="Algorithm" fixedTo="Algorithm">
->>>>>>> duyen
       <simpleAssociationMoniker Id="35bf4c7a-1cd7-4cb8-bc39-c38a8388b769" />
       <relativeChildShapes />
       <nodes>
@@ -172,11 +160,7 @@
         </associationConnectorReferencesSourceCollectionField>
       </sourceCollectionField>
     </simpleAssociationConnector>
-<<<<<<< HEAD
     <simpleAssociationConnector Id="8141e8ec-e200-482c-95d5-b053100745e6" edgePoints="[(7.5 : 8.94483805338542); (6.125 : 8.94483805338542)]" fixedFrom="NotFixed" fixedTo="NotFixed">
-=======
-    <simpleAssociationConnector Id="8141e8ec-e200-482c-95d5-b053100745e6" edgePoints="[(7.5 : 8.97368733723958); (6.125 : 8.97368733723958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
->>>>>>> duyen
       <simpleAssociationMoniker Id="8509b8ea-331d-42ae-aa79-b372459f97dc" />
       <relativeChildShapes />
       <nodes>

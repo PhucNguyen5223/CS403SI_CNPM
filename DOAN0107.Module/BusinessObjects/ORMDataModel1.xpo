@@ -171,7 +171,7 @@
             <field Id="f3de030c-72fc-490d-ac2e-4fd574cf62be" name="Description" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
           </generalXpObjectHasFields>
           <generalXpObjectHasFields Id="4e425063-4dbe-40e7-92a8-4428486b4bca">
-            <field Id="acabe666-a00f-4488-b704-129d5bf02dbc" name="Images" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+            <field Id="acabe666-a00f-4488-b704-129d5bf02dbc" name="Images" columnType="Byte" virtualColumnType="Byte" delayedUpdateModifiedOnly="false" />
           </generalXpObjectHasFields>
           <generalXpObjectHasFields Id="20c6189a-e819-4cc6-a1f7-4533d34e66aa">
             <field Id="43aa8730-4a25-4de4-a46d-1a88eb7f373c" name="Price" columnType="Double" virtualColumnType="Double" delayedUpdateModifiedOnly="false" />

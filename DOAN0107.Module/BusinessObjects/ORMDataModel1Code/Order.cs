@@ -12,10 +12,7 @@ namespace DOAN0107.Module.BusinessObjects.ORMDataModel1
     public partial class Order
     {
         public Order(Session session) : base(session) {
-<<<<<<< HEAD
             CreateTime=DateTime.Now;
-=======
->>>>>>> thanh
         }
         public override void AfterConstruction() { base.AfterConstruction(); }
     }

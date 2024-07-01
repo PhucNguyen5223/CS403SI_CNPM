@@ -38,5 +38,8 @@
     <None Update="BusinessObjects\ORMDataModel1.xpo.diagram">
       <AutoGen>True</AutoGen>
     </None>
+    <None Update="UnusableNodes.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+    </None>
   </ItemGroup>
 </Project>
