@@ -11,7 +11,9 @@ namespace DOAN0107.Module.BusinessObjects.ORMDataModel1
     [DefaultClassOptions]
     public partial class Order
     {
-        public Order(Session session) : base(session) { }
+        public Order(Session session) : base(session) {
+            CreateTime=DateTime.Now;
+        }
         public override void AfterConstruction() { base.AfterConstruction(); }
     }
 
