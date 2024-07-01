@@ -1,12 +1,145 @@
-﻿<?xml version="1.0" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Application Title="DOAN0107">
+  <ActionDesign>
+    <Actions>
+      <Action Id="Cancel" Caption="Tạm dừng" />
+      <Action Id="Delete" Caption="Xóa" />
+      <Action Id="Link" Caption="Liên kết" />
+      <Action Id="New" Caption="Thêm mới" />
+      <Action Id="Refresh" Caption="Tải lại" />
+      <Action Id="Save" Caption="Lưu" />
+      <Action Id="SaveAndClose" Caption="Lưu và Đóng" />
+      <Action Id="SaveAndNew" Caption="Lưu và Thêm" />
+      <Action Id="Unlink" Caption="Hủy liên kết" />
+    </Actions>
+  </ActionDesign>
   <BOModel>
     <Class Name="DevExpress.Persistent.BaseImpl.PermissionPolicy.PermissionPolicyUser" Caption="Base User" />
   </BOModel>
   <Options>
     <LayoutManagerOptions RequiredFieldMark="*" />
   </Options>
+  <SchemaModules>
+    <SchemaModule Name="CloneObjectModule" Version="23.2.6.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerModuleBase" Version="23.2.6.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="23.2.6.0" IsNewNode="True" />
+  </SchemaModules>
   <Views>
     <ListView Id="ApplicationUser_ListView" Caption="Users" />
+    <ListView Id="Category_Products_ListView" ImageName="Detailed" Caption="Sản phẩm">
+      <Columns>
+        <ColumnInfo Id="NameProduct" Caption="Tên sản phẩm" />
+        <ColumnInfo Id="Description" Caption="Mô tả" />
+        <ColumnInfo Id="Images" Caption="Hình ảnh" />
+        <ColumnInfo Id="Price" Caption="Giá" />
+        <ColumnInfo Id="Brand" Caption="Thương hiệu" />
+        <ColumnInfo Id="CategoryID" Caption="Loại sản phẩm" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Product_Detail_DetailView" Caption="Chi tiết sản phẩm">
+      <Items>
+        <PropertyEditor Id="Color" Caption="Màu sắc" />
+        <PropertyEditor Id="ProductID" Caption="Tên sản phẩm" />
+        <PropertyEditor Id="Size" Caption="Kích thước" />
+        <PropertyEditor Id="Stock" Caption="Số lượng còn lại" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="Product_Detail" RelativeSize="15.404699738903394">
+              <LayoutItem Id="Size" RelativeSize="30.508474576271187" />
+              <LayoutItem Id="Color" RelativeSize="22.033898305084747" />
+              <LayoutItem Id="Stock" RelativeSize="22.033898305084747" />
+              <LayoutItem Id="ProductID" RelativeSize="25.423728813559322" />
+            </LayoutGroup>
+            <LayoutGroup Id="XPObject" Caption="Oid" RelativeSize="84.59530026109661">
+              <LayoutGroup Id="Order_Details_Group" ShowCaption="True" Caption="Chi tiết đơn hàng" Index="0" RelativeSize="100" IsNewNode="True">
+                <LayoutItem Id="Order_Details" ViewItem="Order_Details" Index="0" RelativeSize="100" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutItem Id="Oid" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="Order_Details_Group" Direction="Vertical" RelativeSize="50" Removed="True">
+            <LayoutItem Id="Order_Details" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Product_Detail_ListView" Caption="Chi tiết sản phẩm" ImageName="Detailed">
+      <Columns>
+        <ColumnInfo Id="Size" Caption="Kích thước" />
+        <ColumnInfo Id="Color" Caption="Màu sắc" />
+        <ColumnInfo Id="Stock" Caption="Còn lại" />
+        <ColumnInfo Id="ProductID" Caption="Tên sản phẩm" />
+      </Columns>
+    </ListView>
+    <ListView Id="Product_Detail_LookupListView" ImageName="Detailed" Caption="Chi tiết sản phẩm">
+      <Columns>
+        <ColumnInfo Id="Size" Caption="Kích thước" />
+        <ColumnInfo Id="Color" Caption="Màu sắc" />
+        <ColumnInfo Id="Stock" Caption="Số lượng còn lại" />
+        <ColumnInfo Id="ProductID" Caption="Loại sản phẩm" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Product_DetailView" Caption="Sản phẩm" ImageName="BO_Order_Item">
+      <Items>
+        <PropertyEditor Id="Brand" Caption="Thương hiệu" />
+        <PropertyEditor Id="CategoryID" Caption="Loại sản phẩm" />
+        <PropertyEditor Id="Description" Caption="Mô tả" />
+        <PropertyEditor Id="Images" Caption="Hình ảnh" />
+        <PropertyEditor Id="NameProduct" Caption="Tên sản phẩm" />
+        <PropertyEditor Id="Price" Caption="Giá" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="Product" RelativeSize="13.38506304558681" Caption="Sản phẩm">
+              <LayoutGroup Id="Product_col1" RelativeSize="49.676025917926566">
+                <LayoutItem Id="NameProduct" RelativeSize="36.734693877551024" ShowCaption="True" />
+                <LayoutItem Id="Description" RelativeSize="26.53061224489796" />
+                <LayoutItem Id="Images" RelativeSize="36.734693877551024" />
+              </LayoutGroup>
+              <LayoutGroup Id="Product_col2" RelativeSize="50.323974082073434">
+                <LayoutItem Id="Price" RelativeSize="36.734693877551024" />
+                <LayoutItem Id="Brand" RelativeSize="26.53061224489796" />
+                <LayoutItem Id="CategoryID" RelativeSize="36.734693877551024" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="XPObject" RelativeSize="86.6149369544132" Caption="Oid">
+              <LayoutGroup Id="Product_Details_Group" ShowCaption="True" Caption="Chi tiết sản phẩm" Index="0" RelativeSize="100" IsNewNode="True">
+                <LayoutItem Id="Product_Details" ViewItem="Product_Details" Index="0" RelativeSize="100" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutItem Id="Oid" RelativeSize="100" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="Product_Details_Group" Direction="Vertical" RelativeSize="79.41888619854721" Removed="True">
+            <LayoutItem Id="Product_Details" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Product_ListView" Caption="Sản phẩm" ImageName="BO_Order_Item">
+      <Columns>
+        <ColumnInfo Id="NameProduct" Caption="Tên sản phẩm" />
+        <ColumnInfo Id="Description" Caption="Mô tả" />
+        <ColumnInfo Id="Images" Caption="Hình ảnh" />
+        <ColumnInfo Id="Price" Caption="Giá" />
+        <ColumnInfo Id="Brand" Caption="Thương hiệu" />
+        <ColumnInfo Id="CategoryID" Caption="Loại sản phẩm" />
+      </Columns>
+    </ListView>
+    <ListView Id="Product_LookupListView" ImageName="BO_Order_Item" Caption="Sản phẩm">
+      <Columns>
+        <ColumnInfo Id="NameProduct" SortOrder="Ascending" Caption="Tên sản phẩm" />
+      </Columns>
+    </ListView>
+    <ListView Id="Product_Product_Details_ListView" ImageName="Detailed" Caption="Chi tiết sản phẩm">
+      <Columns>
+        <ColumnInfo Id="ProductID" Caption="Tên sản phẩm" />
+        <ColumnInfo Id="Size" SortIndex="0" SortOrder="Ascending" Caption="Kích thước" />
+        <ColumnInfo Id="Color" Caption="Màu sắc" />
+        <ColumnInfo Id="Stock" Caption="Số lượng còn lại" />
+      </Columns>
+    </ListView>
   </Views>
 </Application>
