@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Application Title="DOAN0107">
   <BOModel>
     <Class Name="DevExpress.Persistent.BaseImpl.PermissionPolicy.PermissionPolicyUser" Caption="Base User" />
@@ -6,7 +6,86 @@
   <Options>
     <LayoutManagerOptions RequiredFieldMark="*" />
   </Options>
+  <SchemaModules>
+    <SchemaModule Name="CloneObjectModule" Version="23.2.6.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerModuleBase" Version="23.2.6.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="23.2.6.0" IsNewNode="True" />
+  </SchemaModules>
   <Views>
     <ListView Id="ApplicationUser_ListView" Caption="Users" />
+    <DetailView Id="Order_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="45.476190476190474">
+            <LayoutGroup Id="Order" RelativeSize="78.01047120418848">
+              <LayoutGroup Id="Order_col1" RelativeSize="50">
+                <LayoutItem Id="UserID" RelativeSize="35.84905660377358" />
+                <LayoutItem Id="EmployeeID" RelativeSize="28.30188679245283" />
+                <LayoutItem Id="Status" RelativeSize="35.84905660377358" />
+              </LayoutGroup>
+              <LayoutGroup Id="Order_col2" RelativeSize="50">
+                <LayoutItem Id="TotalPrice" RelativeSize="35.84905660377358" />
+                <LayoutItem Id="CreateTime" RelativeSize="64.15094339622641" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="XPObject" RelativeSize="21.98952879581152">
+              <LayoutItem Id="Oid" RelativeSize="100" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="Order_Details_Group" Caption="Chi Tiết Đơn Hàng" Direction="Vertical" RelativeSize="54.523809523809526">
+            <LayoutItem Id="Order_Details" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="User_DetailView" Caption="Người Dùng">
+      <Items>
+        <PropertyEditor Id="Address" Caption="Địa Chỉ" />
+        <PropertyEditor Id="Avatar" Caption="Ảnh Người Dùng" />
+        <PropertyEditor Id="FullName" Caption="Họ Và Tên" />
+        <PropertyEditor Id="NumberPhone" Caption="Số Điện Thoại" />
+        <PropertyEditor Id="Password" Caption="Mật khẩu" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="58.48101265822785">
+            <LayoutGroup Id="User" RelativeSize="90.47619047619048" Caption="Người Dùng">
+              <LayoutGroup Id="User_col1" RelativeSize="49.81884057971015" Caption="User_col1">
+                <LayoutItem Id="Avatar" RelativeSize="100" Index="0" CaptionLocation="Top" />
+                <LayoutItem Id="Password" ViewItem="Password" Index="0" RelativeSize="50" Removed="True" />
+                <LayoutItem Id="FullName" RelativeSize="35.84905660377358" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="User_col2" RelativeSize="50.18115942028985" Caption="User_col2">
+                <LayoutItem Id="FullName" ViewItem="FullName" Index="0" RelativeSize="22.89156626506024" IsNewNode="True" />
+                <LayoutItem Id="Password" ViewItem="Password" Index="1" RelativeSize="18.072289156626507" IsNewNode="True" />
+                <LayoutItem Id="Email" ViewItem="Email" Index="2" RelativeSize="18.072289156626507" IsNewNode="True" Removed="True" />
+                <LayoutItem Id="NumberPhone" ViewItem="NumberPhone" Index="3" RelativeSize="18.072289156626507" IsNewNode="True" Removed="True" />
+                <LayoutItem Id="Address" ViewItem="Address" Index="4" RelativeSize="22.89156626506024" IsNewNode="True" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="XPObject" Caption="Oid" RelativeSize="9.523809523809524" Index="1">
+              <LayoutItem Id="Oid" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="Orders_Group" Direction="Vertical" RelativeSize="41.51898734177215" Caption="Đơn Hàng">
+            <LayoutItem Id="Orders" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="User_ListView" Caption="Người Dung">
+      <Columns>
+        <ColumnInfo Id="FullName" Width="144" Caption="Họ Và Tên " />
+        <ColumnInfo Id="Password" Caption="Mật Khẩu" />
+        <ColumnInfo Id="Avatar" Caption="Ảnh Nhân Viên" />
+        <ColumnInfo Id="Address" Caption="Địa Chỉ" />
+        <ColumnInfo Id="NumberPhone" Caption="Số Điện Thoại" />
+      </Columns>
+    </ListView>
+    <ListView Id="User_LookupListView" Caption="Người Dùng">
+      <Columns>
+        <ColumnInfo Id="FullName" Caption="Tên Người Dùng" />
+      </Columns>
+    </ListView>
   </Views>
 </Application>
