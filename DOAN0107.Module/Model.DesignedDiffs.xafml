@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Application Title="DOAN0107">
   <BOModel>
     <Class Name="DevExpress.Persistent.BaseImpl.PermissionPolicy.PermissionPolicyUser" Caption="Base User" />
@@ -6,7 +6,111 @@
   <Options>
     <LayoutManagerOptions RequiredFieldMark="*" />
   </Options>
+  <SchemaModules>
+    <SchemaModule Name="CloneObjectModule" Version="24.1.3.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerModuleBase" Version="24.1.3.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="24.1.3.0" IsNewNode="True" />
+  </SchemaModules>
   <Views>
     <ListView Id="ApplicationUser_ListView" Caption="Users" />
+    <DetailView Id="Branch_DetailView">
+      <Items>
+        <PropertyEditor Id="Address" Caption="Địa chỉ" />
+        <PropertyEditor Id="Name" Caption="Tên chi nhánh" />
+        <PropertyEditor Id="Phone" Caption="Số điện thoại" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="19.78527607361963">
+            <LayoutGroup Id="Branch" RelativeSize="74.4186046511628">
+              <LayoutItem Id="Name" RelativeSize="37.5" />
+              <LayoutItem Id="Address" RelativeSize="27.083333333333332" />
+              <LayoutItem Id="Phone" RelativeSize="35.416666666666664" />
+            </LayoutGroup>
+            <LayoutGroup Id="XPObject" RelativeSize="25.58139534883721" Caption="Oid">
+              <LayoutItem Id="Oid" RelativeSize="100" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="Employees_Group" Direction="Vertical" RelativeSize="80.21472392638037" Caption="Chi nhánh">
+            <LayoutItem Id="Employees" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Branch_Employees_ListView">
+      <Columns>
+        <ColumnInfo Id="FullName" SortOrder="Ascending" />
+      </Columns>
+    </ListView>
+    <ListView Id="Branch_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên chi nhánh" />
+        <ColumnInfo Id="Address" Caption="Địa chỉ" />
+        <ColumnInfo Id="Phone" Caption="Số điện thoại" />
+      </Columns>
+    </ListView>
+    <ListView Id="Branch_LookupListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên chi " />
+      </Columns>
+    </ListView>
+    <DetailView Id="Employee_DetailView">
+      <Items>
+        <PropertyEditor Id="Address" Caption="Địa chỉ" />
+        <PropertyEditor Id="Avatar" Caption="Ảnh nhân viên" />
+        <PropertyEditor Id="BranchID" Caption="Chi nhánh" />
+        <PropertyEditor Id="FullName" Caption="Họ và tên nhân viên" />
+        <PropertyEditor Id="NumberPhone" Caption="Số điện thoại" />
+        <PropertyEditor Id="Position" Caption="Chức vụ" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="Employee" Caption="Nhân viên" RelativeSize="34.25076452599389">
+              <LayoutItem Id="Avatar" ViewItem="Avatar" CaptionLocation="Top" Index="0" RelativeSize="33.37264150943396" IsNewNode="True" />
+              <LayoutGroup Id="Employee_col1" Index="1" RelativeSize="0.589622641509434">
+                <LayoutItem Id="Address" Removed="True" />
+                <LayoutItem Id="FullName" Removed="True" />
+                <LayoutItem Id="NumberPhone" Removed="True" />
+                <LayoutItem Id="Position" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Auto1005a2af-72f7-40f4-8863-5f78dec2e43e" ShowCaption="False" Caption="Auto1005a2af-72f7-40f4-8863-5f78dec2e43e(6)" Index="2" RelativeSize="66.0377358490566" IsNewNode="True">
+                <LayoutItem Id="FullName" ViewItem="FullName" Index="0" RelativeSize="19.565217391304348" IsNewNode="True" />
+                <LayoutGroup Id="Employee_col2" ShowCaption="False" Index="1" RelativeSize="80.43478260869566" IsNewNode="True">
+                  <LayoutItem Id="Email" ViewItem="Email" Index="0" RelativeSize="22.972972972972972" IsNewNode="True" />
+                  <LayoutItem Id="Address" ViewItem="Address" Index="1" RelativeSize="17.56756756756757" IsNewNode="True" />
+                  <LayoutItem Id="NumberPhone" ViewItem="NumberPhone" Index="2" RelativeSize="17.56756756756757" IsNewNode="True" />
+                  <LayoutItem Id="Position" ViewItem="Position" Index="3" RelativeSize="17.56756756756757" IsNewNode="True" />
+                  <LayoutItem Id="BranchID" ViewItem="BranchID" Index="4" RelativeSize="24.324324324324323" IsNewNode="True" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="Employee_col2" Removed="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="XPObject" Caption="Oid" RelativeSize="65.74923547400611">
+              <TabbedGroup Id="Tabs" Index="0" RelativeSize="100" IsNewNode="True">
+                <LayoutGroup Id="Stores" ShowCaption="True" Index="0" RelativeSize="100" IsNewNode="True">
+                  <LayoutItem Id="Stores" ViewItem="Stores" Index="0" RelativeSize="100" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutGroup Id="Orders" ShowCaption="True" Index="1" RelativeSize="100" IsNewNode="True">
+                  <LayoutItem Id="Orders" ViewItem="Orders" Index="0" RelativeSize="100" IsNewNode="True" />
+                </LayoutGroup>
+              </TabbedGroup>
+              <LayoutItem Id="Oid" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" Removed="True" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Employee_ListView">
+      <Columns>
+        <ColumnInfo Id="FullName" Caption="Họ và tên" />
+        <ColumnInfo Id="NumberPhone" Caption="Số điện thoại" />
+        <ColumnInfo Id="Address" Caption="Địa chỉ" />
+        <ColumnInfo Id="Position" Caption="Chức vụ" />
+        <ColumnInfo Id="Avatar" Caption="Ảnh nhân viên" />
+        <ColumnInfo Id="BranchID" Caption="Chi nhánh" />
+      </Columns>
+    </ListView>
   </Views>
 </Application>
