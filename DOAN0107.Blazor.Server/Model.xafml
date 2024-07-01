@@ -1,7 +1,61 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Application>
-  <NavigationItems NavigationStyle="Accordion">
-  </NavigationItems>
+  <NavigationItems NavigationStyle="Accordion" />
+  <SchemaModules>
+    <SchemaModule Name="CloneObjectModule" Version="24.1.3.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerBlazorModule" Version="24.1.3.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerModuleBase" Version="24.1.3.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="24.1.3.0" IsNewNode="True" />
+  </SchemaModules>
   <Views DefaultListEditor="DevExpress.ExpressApp.Blazor.Editors.DxGridListEditor">
+    <DetailView Id="Category_DetailView">
+      <Items>
+        <PropertyEditor Id="Name" Caption="Tên Danh Mục:" />
+        <PropertyEditor Id="Type" Caption="Loại Danh Mục:" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="49.73684210526316">
+            <LayoutGroup Id="Category" RelativeSize="32.804232804232804" />
+            <LayoutGroup Id="XPObject" RelativeSize="67.19576719576719" />
+          </LayoutGroup>
+          <LayoutGroup Id="Products_Group" RelativeSize="50.26315789473684" Caption="Sản Phẩm" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Category_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên Danh Mục" />
+        <ColumnInfo Id="Type" Caption="Loại Danh Mục" />
+      </Columns>
+    </ListView>
+    <ListView Id="Category_LookupListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên Danh Mục" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Provider_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="22.63157894736842">
+            <LayoutGroup Id="Provider" RelativeSize="100" />
+            <LayoutGroup Id="XPObject" Removed="True" />
+          </LayoutGroup>
+          <LayoutGroup Id="Stores_Group" RelativeSize="77.36842105263158" Caption="Nhập Kho" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Provider_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên Nhà Cung Cấp" />
+        <ColumnInfo Id="NumberPhone" Caption="Số Điện Thoại" />
+        <ColumnInfo Id="Address" Caption="Địa chỉ" />
+      </Columns>
+    </ListView>
+    <ListView Id="Provider_LookupListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên Nhà Cung Cấp" />
+      </Columns>
+    </ListView>
   </Views>
 </Application>

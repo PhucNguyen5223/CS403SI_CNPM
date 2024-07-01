@@ -13,6 +13,10 @@ using DevExpress.Data.Filtering;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Reflection;
+<<<<<<< HEAD
+=======
+using DevExpress.ExpressApp.DC;
+>>>>>>> thanh
 using DevExpress.ExpressApp.Model;
 namespace DOAN0107.Module.BusinessObjects.ORMDataModel1
 {
@@ -46,8 +50,12 @@ namespace DOAN0107.Module.BusinessObjects.ORMDataModel1
             set { SetPropertyValue<double>(nameof(TotalPrice), ref fTotalPrice, value); }
         }
         DateTime fCreateTime;
+<<<<<<< HEAD
         [ModelDefault("EditMask", "dd/MM/yyyy HH:mm")]
         [ModelDefault("DisplayFormat", "{0:dd/MM/yyyy HH:mm}")]
+=======
+       
+>>>>>>> thanh
         public DateTime CreateTime
         {
             get { return fCreateTime; }
