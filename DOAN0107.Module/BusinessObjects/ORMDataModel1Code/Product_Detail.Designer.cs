@@ -45,6 +45,8 @@ namespace DOAN0107.Module.BusinessObjects.ORMDataModel1
         }
         [Association(@"Order_DetailReferencesProduct_Detail")]
         public XPCollection<Order_Detail> Order_Details { get { return GetCollection<Order_Detail>(nameof(Order_Details)); } }
+        [Association(@"Store_DetailReferencesProduct_Detail")]
+        public XPCollection<Store_Detail> Store_Details { get { return GetCollection<Store_Detail>(nameof(Store_Details)); } }
     }
 
 }
