@@ -11,7 +11,9 @@ namespace DOAN0107.Module.BusinessObjects.ORMDataModel1
     [DefaultClassOptions]
     public partial class Store
     {
-        public Store(Session session) : base(session) { }
+        public Store(Session session) : base(session) {
+            Date = DateTime.Now;
+        }
         public override void AfterConstruction() { base.AfterConstruction(); }
     }
 

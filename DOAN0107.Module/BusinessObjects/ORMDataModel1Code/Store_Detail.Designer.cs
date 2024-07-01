@@ -25,11 +25,12 @@ namespace DOAN0107.Module.BusinessObjects.ORMDataModel1
             get { return fStoreID; }
             set { SetPropertyValue<Store>(nameof(StoreID), ref fStoreID, value); }
         }
-        string fProductDetailID;
-        public string ProductDetailID
+        Product_Detail fProductDetailID;
+        [Association(@"Store_DetailReferencesProduct_Detail")]
+        public Product_Detail ProductDetailID
         {
             get { return fProductDetailID; }
-            set { SetPropertyValue<string>(nameof(ProductDetailID), ref fProductDetailID, value); }
+            set { SetPropertyValue<Product_Detail>(nameof(ProductDetailID), ref fProductDetailID, value); }
         }
         short fQuantity;
         public short Quantity
