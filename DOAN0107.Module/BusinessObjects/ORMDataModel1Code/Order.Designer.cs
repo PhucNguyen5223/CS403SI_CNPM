@@ -13,19 +13,23 @@ using DevExpress.Data.Filtering;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Reflection;
-using DevExpress.ExpressApp.DC;
-using DevExpress.ExpressApp.Model;
 namespace DOAN0107.Module.BusinessObjects.ORMDataModel1
 {
 
-    public partial class Order : XPObject
+    public partial class Bill : XPObject
     {
-        User fUserID;
-        [Association(@"OrderReferencesUser")]
-        public User UserID
+        string fEntryCode;
+        public string EntryCode
         {
-            get { return fUserID; }
-            set { SetPropertyValue<User>(nameof(UserID), ref fUserID, value); }
+            get { return fEntryCode; }
+            set { SetPropertyValue<string>(nameof(EntryCode), ref fEntryCode, value); }
+        }
+        Customer fCustomerID;
+        [Association(@"OrderReferencesUser")]
+        public Customer CustomerID
+        {
+            get { return fCustomerID; }
+            set { SetPropertyValue<Customer>(nameof(CustomerID), ref fCustomerID, value); }
         }
         Employee fEmployeeID;
         [Association(@"OrderReferencesEmployee")]
@@ -34,12 +38,6 @@ namespace DOAN0107.Module.BusinessObjects.ORMDataModel1
             get { return fEmployeeID; }
             set { SetPropertyValue<Employee>(nameof(EmployeeID), ref fEmployeeID, value); }
         }
-        string fStatus;
-        public string Status
-        {
-            get { return fStatus; }
-            set { SetPropertyValue<string>(nameof(Status), ref fStatus, value); }
-        }
         double fTotalPrice;
         public double TotalPrice
         {
@@ -47,15 +45,19 @@ namespace DOAN0107.Module.BusinessObjects.ORMDataModel1
             set { SetPropertyValue<double>(nameof(TotalPrice), ref fTotalPrice, value); }
         }
         DateTime fCreateTime;
-        [ModelDefault("EditMask", "dd/MM/yyyy HH:mm")]
-        [ModelDefault("DisplayFormat", "{0:dd/MM/yyyy HH:mm}")]
         public DateTime CreateTime
         {
             get { return fCreateTime; }
             set { SetPropertyValue<DateTime>(nameof(CreateTime), ref fCreateTime, value); }
         }
+        DateTime fUpdateTime;
+        public DateTime UpdateTime
+        {
+            get { return fUpdateTime; }
+            set { SetPropertyValue<DateTime>(nameof(UpdateTime), ref fUpdateTime, value); }
+        }
         [Association(@"Order_DetailReferencesOrder")]
-        public XPCollection<Order_Detail> Order_Details { get { return GetCollection<Order_Detail>(nameof(Order_Details)); } }
+        public XPCollection<Bill_Detail> Order_Details { get { return GetCollection<Bill_Detail>(nameof(Order_Details)); } }
     }
 
 }

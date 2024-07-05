@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="Bill_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Bill">
+              <LayoutGroup Id="Bill_col1">
+                <LayoutItem Id="TotalPrice" RelativeSize="36.734693877551024" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Delivery_Bill_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="Id" Caption="Mã hóa đơn" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Delivery_Bill">
+              <LayoutGroup Id="Delivery_Bill_col1">
+                <LayoutItem Id="Id" RelativeSize="36.734693877551024" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

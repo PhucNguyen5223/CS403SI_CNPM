@@ -13,8 +13,6 @@ using DevExpress.Data.Filtering;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Reflection;
-using DevExpress.ExpressApp.DC;
-using DevExpress.Persistent.Base;
 namespace DOAN0107.Module.BusinessObjects.ORMDataModel1
 {
 
@@ -32,16 +30,11 @@ namespace DOAN0107.Module.BusinessObjects.ORMDataModel1
             get { return fDescription; }
             set { SetPropertyValue<string>(nameof(Description), ref fDescription, value); }
         }
-
-        [Delayed(true), VisibleInListView(true)]
-        [ImageEditor(ListViewImageEditorMode = ImageEditorMode.PopupPictureEdit,
-        DetailViewImageEditorMode = ImageEditorMode.PictureEdit, DetailViewImageEditorFixedHeight = 340, DetailViewImageEditorFixedWidth = 227,
-        ListViewImageEditorCustomHeight = 40)]
-        [XafDisplayName("Ảnh")]
-        public byte[] Images
+        byte fImages;
+        public byte Images
         {
-            get { return GetDelayedPropertyValue<byte[]>(nameof(Images)); }
-            set { SetDelayedPropertyValue(nameof(Images), value); }
+            get { return fImages; }
+            set { SetPropertyValue<byte>(nameof(Images), ref fImages, value); }
         }
         double fPrice;
         public double Price

@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="Order_Detail_DetailView" Caption="Chi tiết đơn hàng">
+      <Items Id="Items">
+        <PropertyEditor Id="OrderID" Caption="Mã đơn: " />
+        <PropertyEditor Id="Price" Caption="Giá tiền: " />
+        <PropertyEditor Id="ProductDetailID" Caption="Sản phẩm" />
+        <PropertyEditor Id="Quantity" Caption="Số lượng: " />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="Order_Detail" RelativeSize="100">
+              <LayoutItem Id="OrderID" RelativeSize="8.178438661710038" />
+              <LayoutItem Id="Quantity" RelativeSize="5.947955390334572" />
+              <LayoutItem Id="Price" RelativeSize="5.947955390334572" />
+              <LayoutItem Id="ProductDetailID" RelativeSize="79.92565055762081" />
+            </LayoutGroup>
+            <LayoutGroup Id="XPObject" RelativeSize="62.674094707520894" Caption="Oid" Removed="True">
+              <LayoutItem Id="Oid" RelativeSize="100" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Order_Detail_ListView" Caption="Chi tiết đơn hàng">
+      <Columns Id="Columns">
+        <ColumnInfo Id="OrderID" Caption="Mã đơn" />
+        <ColumnInfo Id="Quantity" Caption="Số lượng" />
+        <ColumnInfo Id="Price" Caption="Giá" />
+        <ColumnInfo Id="ProductDetailID" Caption="Sản phẩm" />
+      </Columns>
+    </ListView>
+    <ListView Id="Order_Detail_LookupListView" Caption="Chi tiết đơn hàng">
+      <Columns Id="Columns">
+        <ColumnInfo Id="OrderID" Caption="Mã đơn" />
+        <ColumnInfo Id="Quantity" Caption="Số lượng" />
+        <ColumnInfo Id="Price" Caption="Giá" />
+        <ColumnInfo Id="ProductDetailID" Caption="Sản phẩm" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Order_DetailView" Caption="Đơn hàng">
+      <Items Id="Items">
+        <PropertyEditor Id="CreateTime" Caption="Thời gian tạo đơn: " DataSourceCriteria="" DataSourcePropertyIsNullMode="SelectNothing" />
+        <PropertyEditor Id="EmployeeID" Caption="Nhân viên: " />
+        <PropertyEditor Id="Status" Caption="Trạng thái đơn: " />
+        <PropertyEditor Id="TotalPrice" Caption="Tổng tiền: " />
+        <PropertyEditor Id="UserID" Caption="Tên khách hàng: " />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="25.17241379310345">
+            <LayoutGroup Id="Order" RelativeSize="100">
+              <LayoutGroup Id="Order_col1" RelativeSize="50">
+                <LayoutItem Id="UserID" RelativeSize="36.734693877551024" />
+                <LayoutItem Id="EmployeeID" RelativeSize="26.53061224489796" />
+                <LayoutItem Id="Status" RelativeSize="36.734693877551024" />
+              </LayoutGroup>
+              <LayoutGroup Id="Order_col2" RelativeSize="50" Caption="Order_col2">
+                <LayoutItem Id="CreateTime" RelativeSize="100" Index="0" />
+                <LayoutItem Id="TotalPrice" RelativeSize="35.84905660377358" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="XPObject" Caption="Oid" RelativeSize="21.98952879581152" Removed="True">
+              <LayoutItem Id="Oid" RelativeSize="100" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="Order_Details_Group" Direction="Vertical" RelativeSize="74.82758620689656" Caption="Chi Tiết Đơn Hàng">
+            <LayoutItem Id="Order_Details" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Order_ListView" Caption="Đơn hàng">
+      <Columns Id="Columns">
+        <ColumnInfo Id="UserID" Caption="Khách hàng" DisplayFormat="" />
+        <ColumnInfo Id="EmployeeID" Caption="Nhân viên" />
+        <ColumnInfo Id="Status" Caption="Trạng thái" />
+        <ColumnInfo Id="TotalPrice" Caption="Thành tiền" />
+        <ColumnInfo Id="CreateTime" Caption="Thời gian tạo đơn" />
+      </Columns>
+    </ListView>
+    <ListView Id="Order_LookupListView" Caption="Đơn hàng">
+      <Columns Id="Columns">
+        <ColumnInfo Id="UserID" Caption="Khách hàng" />
+        <ColumnInfo Id="EmployeeID" Caption="Nhân viên" />
+        <ColumnInfo Id="Status" Caption="Trạng thái " />
+        <ColumnInfo Id="TotalPrice" Caption="Thành tiền" />
+        <ColumnInfo Id="CreateTime" Caption="Thời gian tạo đơn" />
+      </Columns>
+    </ListView>
+    <ListView Id="Order_Order_Details_ListView" Caption="Chi tiết đơn hàng">
+      <Columns Id="Columns">
+        <ColumnInfo Id="OrderID" Caption="Mã đơn" />
+        <ColumnInfo Id="Quantity" Width="117" Caption="Số lượng" />
+        <ColumnInfo Id="Price" Caption="Giá" />
+        <ColumnInfo Id="ProductDetailID" Caption="Sản phẩm" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Store_Detail_DetailView" Caption="Chi tiết kho">
+      <Items Id="Items">
+        <PropertyEditor Id="Price" Caption="Đơn giá" />
+        <PropertyEditor Id="ProductDetailID" Caption="Mã chi tiết sản phẩm" />
+        <PropertyEditor Id="Quantity" Caption="Số lượng" />
+        <PropertyEditor Id="StoreID" Caption="Mã kho" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="Store_Detail" RelativeSize="14.878397711015737">
+              <LayoutItem Id="StoreID" RelativeSize="36.53846153846154" />
+              <LayoutItem Id="ProductDetailID" RelativeSize="28.846153846153847" />
+              <LayoutGroup Id="Autoc9b1b8bb-e73d-43d9-bf20-82f806a011bd" ShowCaption="False" Caption="" Direction="Horizontal" Index="2" RelativeSize="34.61538461538461">
+                <LayoutItem Id="Quantity" ViewItem="Quantity" Index="0" RelativeSize="50" />
+                <LayoutItem Id="Price" ViewItem="Price" Index="1" RelativeSize="50" />
+              </LayoutGroup>
+              <LayoutItem Id="Price" RelativeSize="27.516778523489933" Removed="True" />
+              <LayoutItem Id="Quantity" RelativeSize="21.476510067114095" Removed="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="XPObject" Caption="Oid" RelativeSize="85.12160228898426">
+              <LayoutItem Id="Oid" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Store_Detail_ListView" Caption="Chi tiết kho">
+      <Columns Id="Columns">
+        <ColumnInfo Id="StoreID" Caption="Mã kho" />
+        <ColumnInfo Id="ProductDetailID" Caption="Mã chi tiết sản phẩm" />
+        <ColumnInfo Id="Quantity" Caption="Số lượng" />
+        <ColumnInfo Id="Price" Caption="Đơn giá" />
+      </Columns>
+    </ListView>
+    <ListView Id="Store_Detail_LookupListView" Caption="Chi Tiết Kho">
+      <Columns Id="Columns">
+        <ColumnInfo Id="StoreID" Caption="Kho" />
+        <ColumnInfo Id="ProductDetailID" Caption="Chi Tiết Sản Phẩm" />
+        <ColumnInfo Id="Quantity" Caption="Số lượng" />
+        <ColumnInfo Id="Price" Caption="Giá" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Store_DetailView" Caption="Kho">
+      <Items Id="Items">
+        <PropertyEditor Id="Date" Caption="Ngày tạo" />
+        <PropertyEditor Id="EmployeeID" Caption="Mã nhân viên" />
+        <PropertyEditor Id="ProviderID" Caption="Mã nhà cung cấp" />
+        <PropertyEditor Id="TotalPrice" Caption="Đơn giá" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="19.82758620689655">
+            <LayoutGroup Id="Store" RelativeSize="100">
+              <LayoutItem Id="EmployeeID" RelativeSize="36.95652173913044" />
+              <LayoutItem Id="ProviderID" RelativeSize="28.26086956521739" />
+              <LayoutItem Id="Date" RelativeSize="34.78260869565217" />
+              <LayoutItem Id="TotalPrice" Removed="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="XPObject" RelativeSize="25.806451612903224" Caption="Oid" Removed="True">
+              <LayoutItem Id="Oid" RelativeSize="100" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="Store_Details_Group" Direction="Vertical" RelativeSize="80.17241379310344" Caption="Chi tiết kho">
+            <LayoutItem Id="Store_Details" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Store_ListView" Caption="Kho">
+      <Columns Id="Columns">
+        <ColumnInfo Id="EmployeeID" Caption="Mã nhân viên" />
+        <ColumnInfo Id="ProviderID" Caption="Mã nhà cung cấp" />
+        <ColumnInfo Id="Date" Caption="Ngày tạo" />
+        <ColumnInfo Id="TotalPrice" Caption="Đơn giá" />
+      </Columns>
+    </ListView>
+    <ListView Id="Store_LookupListView" Caption="Kho">
+      <Columns Id="Columns">
+        <ColumnInfo Id="EmployeeID" Caption="Nhân Viên" />
+        <ColumnInfo Id="ProviderID" Caption="Nhà Cung Cấp" />
+        <ColumnInfo Id="Date" Caption="Ngày" />
+        <ColumnInfo Id="TotalPrice" Caption="Tổng Tiền" />
+      </Columns>
+    </ListView>
+    <ListView Id="Store_Store_Details_ListView" Caption="Chi tiết kho">
+      <Columns Id="Columns">
+        <ColumnInfo Id="StoreID" Caption="Mã kho" />
+        <ColumnInfo Id="ProductDetailID" Width="184" SortIndex="-1" SortOrder="None" />
+        <ColumnInfo Id="Quantity" Width="123" SortIndex="0" SortOrder="Ascending" />
+        <ColumnInfo Id="Price" Width="104" />
+      </Columns>
+    </ListView>
+    <DetailView Id="User_DetailView" Caption="Người Dùng">
+      <Items Id="Items">
+        <PropertyEditor Id="Address" Caption="Địa Chỉ" />
+        <PropertyEditor Id="Avatar" Caption="Ảnh Người Dùng" />
+        <PropertyEditor Id="FullName" Caption="Họ Và Tên" />
+        <PropertyEditor Id="NumberPhone" Caption="Số Điện Thoại" />
+        <PropertyEditor Id="Password" Caption="Mật khẩu" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="58.48101265822785">
+            <LayoutGroup Id="User" RelativeSize="90.47619047619048" Caption="Người Dùng">
+              <LayoutGroup Id="User_col1" RelativeSize="49.81884057971015" Caption="User_col1">
+                <LayoutItem Id="Avatar" RelativeSize="100" Index="0" CaptionLocation="Top" />
+                <LayoutItem Id="Password" ViewItem="Password" Index="0" RelativeSize="50" Removed="True" />
+                <LayoutItem Id="FullName" RelativeSize="35.84905660377358" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="User_col2" RelativeSize="50.18115942028985" Caption="User_col2">
+                <LayoutItem Id="FullName" ViewItem="FullName" Index="0" RelativeSize="22.89156626506024" />
+                <LayoutItem Id="Password" ViewItem="Password" Index="1" RelativeSize="18.072289156626507" />
+                <LayoutItem Id="Email" ViewItem="Email" Index="2" RelativeSize="18.072289156626507" Removed="True" />
+                <LayoutItem Id="NumberPhone" ViewItem="NumberPhone" Index="3" RelativeSize="18.072289156626507" Removed="True" />
+                <LayoutItem Id="Address" ViewItem="Address" Index="4" RelativeSize="22.89156626506024" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="XPObject" Caption="Oid" RelativeSize="9.523809523809524" Index="1">
+              <LayoutItem Id="Oid" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="Orders_Group" Direction="Vertical" RelativeSize="41.51898734177215" Caption="Đơn Hàng">
+            <LayoutItem Id="Orders" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="User_ListView" Caption="Người Dùng">
+      <Columns Id="Columns">
+        <ColumnInfo Id="FullName" Width="144" Caption="Họ Và Tên " />
+        <ColumnInfo Id="Password" Caption="Mật Khẩu" />
+        <ColumnInfo Id="Avatar" Caption="Ảnh Nhân Viên" />
+        <ColumnInfo Id="Address" Caption="Địa Chỉ" />
+        <ColumnInfo Id="NumberPhone" Caption="Số Điện Thoại" />
+      </Columns>
+    </ListView>
+    <ListView Id="User_LookupListView" Caption="Người Dùng">
+      <Columns Id="Columns">
+        <ColumnInfo Id="FullName" Caption="Tên Người Dùng" />
+      </Columns>
+    </ListView>
+    <ListView Id="User_Orders_ListView" Caption="Đơn hàng">
+      <Columns Id="Columns">
+        <ColumnInfo Id="UserID" Caption="Khách hàng" />
+        <ColumnInfo Id="EmployeeID" Caption="Nhân viên" />
+        <ColumnInfo Id="Status" Caption="Trạng thái đơn" />
+        <ColumnInfo Id="TotalPrice" Caption="Thành tiền" />
+        <ColumnInfo Id="CreateTime" Caption="Thời gian tạo đơn" />
+      </Columns>
+    </ListView>
+    <ListView Id="Employee_Orders_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="UserID" Caption="Khách hàng" />
+        <ColumnInfo Id="Status" Caption="Trạng thái đơn" />
+      </Columns>
+    </ListView>
+    <ListView Id="Product_Detail_Order_Details_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="OrderID" Caption="Mã đơn" />
+      </Columns>
+    </ListView>
+    <ListView Id="Product_Detail_Store_Details_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="StoreID" Caption="Kho" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

@@ -8,9 +8,9 @@ using System.Reflection;
 namespace DOAN0107.Module.BusinessObjects.ORMDataModel1
 {
 
-    public partial class Store_Detail
+    public partial class Warehouse_Receipt_Detail
     {
-        public Store_Detail(Session session) : base(session) { }
+        public Warehouse_Receipt_Detail(Session session) : base(session) { }
         public override void AfterConstruction() { base.AfterConstruction(); }
     }
 

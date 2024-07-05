@@ -23,15 +23,17 @@
           <Item Id="Product_ListView" Caption="SẢN PHẨM" ImageName="ProductOrderDetail-21" Index="0" />
           <Item Id="Category_ListView" Caption="LOẠI SẢN PHẨM" ImageName="ItemTypeStandard" Index="1" />
           <Item Id="Provider_ListView" Caption="NHÀ CUNG CẤP" ImageName="BO_Vendor" Index="2" />
-          <Item Id="Store_ListView" Caption="NHẬP KHO" ImageName="Shopping_Store" Index="3" />
-          <Item Id="Branch_ListView" Caption="CHI NHÁNH" ImageName="BO_Address" Index="4" />
-          <Item Id="Employee_ListView" Caption="NHÂN VIÊN" ImageName="BO_Customer" Index="5" />
-          <Item Id="User_ListView" ImageName="BO_Department" Caption="KHÁCH HÀNG" Index="6" />
-          <Item Id="Order_ListView" Caption="ĐƠN HÀNG" ImageName="Shopping_ShoppingCart" Index="7" />
-          <Item Id="MyDetails" Index="8" />
-          <Item Id="ApplicationUser_ListView" Caption="TÀI KHOẢN" />
+          <Item Id="Branch_ListView" Caption="CHI NHÁNH" ImageName="BO_Address" Index="3" />
+          <Item Id="Employee_ListView" Caption="NHÂN VIÊN" ImageName="BO_Customer" Index="4" />
+          <Item Id="Bill_ListView" Caption="HÓA ĐƠN" ImageName="BO_Contract" Index="5" />
+          <Item Id="Customer_ListView" Caption="KHÁCH HÀNG" ImageName="BO_Department" Index="6" />
+          <Item Id="Warehouse_Receipt_ListView" ImageName="format2" Caption="PHIẾU NHẬP" Index="7" />
+          <Item Id="Delivery_Bill_ListView" Caption="PHIẾU XUẤT" Index="8" />
+          <Item Id="PermissionPolicyRole_ListView" Caption="PHÂN QUYỀN" Index="9" />
+          <Item Id="ApplicationUser_ListView" Caption="TÀI KHOẢN" Index="10" />
+          <Item Id="MyDetails" Index="11" />
           <Item Id="Event_ListView" Removed="True" />
-          <Item Id="PermissionPolicyRole_ListView" Caption="PHÂN QUYỀN" />
+          <Item Id="HDban_ListView" Removed="True" />
         </Items>
       </Item>
       <Item Id="Reports" Caption="BÁO CÁO" ImageName="BO_Report">

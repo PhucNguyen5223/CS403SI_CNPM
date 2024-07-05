@@ -8,9 +8,10 @@ using System.Reflection;
 using DevExpress.Persistent.Base;
 namespace DOAN0107.Module.BusinessObjects.ORMDataModel1
 {
-    public partial class Bill_Detail
+    [DefaultClassOptions]
+    public partial class Delivery_Bill
     {
-        public Bill_Detail(Session session) : base(session) { }
+        public Delivery_Bill(Session session) : base(session) { }
         public override void AfterConstruction() { base.AfterConstruction(); }
     }
 

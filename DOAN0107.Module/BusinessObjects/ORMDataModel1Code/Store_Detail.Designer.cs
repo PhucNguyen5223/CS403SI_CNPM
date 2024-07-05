@@ -16,14 +16,14 @@ using System.Reflection;
 namespace DOAN0107.Module.BusinessObjects.ORMDataModel1
 {
 
-    public partial class Store_Detail : XPObject
+    public partial class Warehouse_Receipt_Detail : XPObject
     {
-        Store fStoreID;
+        Warehouse_Receipt fWarehouseReceiptID;
         [Association(@"Store_DetailReferencesStore")]
-        public Store StoreID
+        public Warehouse_Receipt WarehouseReceiptID
         {
-            get { return fStoreID; }
-            set { SetPropertyValue<Store>(nameof(StoreID), ref fStoreID, value); }
+            get { return fWarehouseReceiptID; }
+            set { SetPropertyValue<Warehouse_Receipt>(nameof(WarehouseReceiptID), ref fWarehouseReceiptID, value); }
         }
         Product_Detail fProductDetailID;
         [Association(@"Store_DetailReferencesProduct_Detail")]

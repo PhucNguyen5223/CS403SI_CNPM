@@ -16,14 +16,14 @@ using System.Reflection;
 namespace DOAN0107.Module.BusinessObjects.ORMDataModel1
 {
 
-    public partial class Bill_Detail : XPObject
+    public partial class Delivery_Bill_Detail : XPObject
     {
-        Bill fBillID;
-        [Association(@"Order_DetailReferencesOrder")]
-        public Bill BillID
+        Delivery_Bill fDeliveryBillID;
+        [Association(@"Delivery_Bill_DetailReferencesDelivery_Bill")]
+        public Delivery_Bill DeliveryBillID
         {
-            get { return fBillID; }
-            set { SetPropertyValue<Bill>(nameof(BillID), ref fBillID, value); }
+            get { return fDeliveryBillID; }
+            set { SetPropertyValue<Delivery_Bill>(nameof(DeliveryBillID), ref fDeliveryBillID, value); }
         }
         short fQuantity;
         public short Quantity
@@ -38,7 +38,7 @@ namespace DOAN0107.Module.BusinessObjects.ORMDataModel1
             set { SetPropertyValue<double>(nameof(Price), ref fPrice, value); }
         }
         Product_Detail fProductDetailID;
-        [Association(@"Order_DetailReferencesProduct_Detail")]
+        [Association(@"Delivery_Bill_DetailReferencesProduct_Detail")]
         public Product_Detail ProductDetailID
         {
             get { return fProductDetailID; }

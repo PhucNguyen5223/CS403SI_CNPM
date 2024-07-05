@@ -5,12 +5,12 @@ using DevExpress.Data.Filtering;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Reflection;
-using DevExpress.Persistent.Base;
 namespace DOAN0107.Module.BusinessObjects.ORMDataModel1
 {
-    public partial class Bill_Detail
+
+    public partial class Delivery_Bill_Detail
     {
-        public Bill_Detail(Session session) : base(session) { }
+        public Delivery_Bill_Detail(Session session) : base(session) { }
         public override void AfterConstruction() { base.AfterConstruction(); }
     }
 

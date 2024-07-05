@@ -9,10 +9,11 @@ using DevExpress.Persistent.Base;
 namespace DOAN0107.Module.BusinessObjects.ORMDataModel1
 {
     [DefaultClassOptions]
-    public partial class Order
+    public partial class Bill
     {
-        public Order(Session session) : base(session) {
-            CreateTime=DateTime.Now;
+        public Bill(Session session) : base(session)
+        {
+            CreateTime = DateTime.Now;
         }
         public override void AfterConstruction() { base.AfterConstruction(); }
     }

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="Default">
+        <Items Id="Items">
+          <Item Id="Store_ListView" Caption="NHẬP KHO" ImageName="Shopping_Store" Index="3" />
+          <Item Id="User_ListView" ImageName="BO_Department" Caption="KHÁCH HÀNG" Index="6" />
+          <Item Id="Order_ListView" Caption="ĐƠN HÀNG" ImageName="Shopping_ShoppingCart" Index="7" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+</Application>

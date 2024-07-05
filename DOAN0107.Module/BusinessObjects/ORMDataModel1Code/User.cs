@@ -9,9 +9,9 @@ using DevExpress.Persistent.Base;
 namespace DOAN0107.Module.BusinessObjects.ORMDataModel1
 {
     [DefaultClassOptions]
-    public partial class User
+    public partial class Customer
     {
-        public User(Session session) : base(session) { }
+        public Customer(Session session) : base(session) { }
         public override void AfterConstruction() { base.AfterConstruction(); }
     }
 

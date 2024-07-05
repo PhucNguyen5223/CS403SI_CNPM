@@ -16,25 +16,13 @@ using System.Reflection;
 namespace DOAN0107.Module.BusinessObjects.ORMDataModel1
 {
 
-    public partial class User : XPObject
+    public partial class Customer : XPObject
     {
         string fFullName;
         public string FullName
         {
             get { return fFullName; }
             set { SetPropertyValue<string>(nameof(FullName), ref fFullName, value); }
-        }
-        string fPassword;
-        public string Password
-        {
-            get { return fPassword; }
-            set { SetPropertyValue<string>(nameof(Password), ref fPassword, value); }
-        }
-        string fAvatar;
-        public string Avatar
-        {
-            get { return fAvatar; }
-            set { SetPropertyValue<string>(nameof(Avatar), ref fAvatar, value); }
         }
         string fEmail;
         public string Email
@@ -55,7 +43,7 @@ namespace DOAN0107.Module.BusinessObjects.ORMDataModel1
             set { SetPropertyValue<string>(nameof(NumberPhone), ref fNumberPhone, value); }
         }
         [Association(@"OrderReferencesUser")]
-        public XPCollection<Order> Orders { get { return GetCollection<Order>(nameof(Orders)); } }
+        public XPCollection<Bill> Orders { get { return GetCollection<Bill>(nameof(Orders)); } }
     }
 
 }

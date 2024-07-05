@@ -44,9 +44,11 @@ namespace DOAN0107.Module.BusinessObjects.ORMDataModel1
             set { SetPropertyValue<Product>(nameof(ProductID), ref fProductID, value); }
         }
         [Association(@"Order_DetailReferencesProduct_Detail")]
-        public XPCollection<Order_Detail> Order_Details { get { return GetCollection<Order_Detail>(nameof(Order_Details)); } }
+        public XPCollection<Bill_Detail> Order_Details { get { return GetCollection<Bill_Detail>(nameof(Order_Details)); } }
         [Association(@"Store_DetailReferencesProduct_Detail")]
-        public XPCollection<Store_Detail> Store_Details { get { return GetCollection<Store_Detail>(nameof(Store_Details)); } }
+        public XPCollection<Warehouse_Receipt_Detail> Store_Details { get { return GetCollection<Warehouse_Receipt_Detail>(nameof(Store_Details)); } }
+        [Association(@"Delivery_Bill_DetailReferencesProduct_Detail")]
+        public XPCollection<Delivery_Bill_Detail> Delivery_Bill_Details { get { return GetCollection<Delivery_Bill_Detail>(nameof(Delivery_Bill_Details)); } }
     }
 
 }

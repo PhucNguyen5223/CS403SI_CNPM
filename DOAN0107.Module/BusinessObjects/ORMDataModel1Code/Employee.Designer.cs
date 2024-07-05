@@ -13,6 +13,8 @@ using DevExpress.Data.Filtering;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Reflection;
+using DevExpress.ExpressApp.DC;
+using DevExpress.Persistent.Base;
 namespace DOAN0107.Module.BusinessObjects.ORMDataModel1
 {
 
@@ -48,12 +50,17 @@ namespace DOAN0107.Module.BusinessObjects.ORMDataModel1
             get { return fEmail; }
             set { SetPropertyValue<string>(nameof(Email), ref fEmail, value); }
         }
-        string fAvatar;
-        public string Avatar
+        [Delayed(true), VisibleInListView(true)]
+        [ImageEditor(ListViewImageEditorMode = ImageEditorMode.PopupPictureEdit,
+        DetailViewImageEditorMode = ImageEditorMode.PictureEdit, DetailViewImageEditorFixedHeight = 340, DetailViewImageEditorFixedWidth = 227,
+        ListViewImageEditorCustomHeight = 40)]
+        [XafDisplayName("Ảnh")]
+        public byte[] Avatar
         {
-            get { return fAvatar; }
-            set { SetPropertyValue<string>(nameof(Avatar), ref fAvatar, value); }
+            get { return GetDelayedPropertyValue<byte[]>(nameof(Avatar)); }
+            set { SetDelayedPropertyValue(nameof(Avatar), value); }
         }
+        
         Branch fBranchID;
         [Association(@"EmployeeReferencesBranch")]
         public Branch BranchID
@@ -61,10 +68,24 @@ namespace DOAN0107.Module.BusinessObjects.ORMDataModel1
             get { return fBranchID; }
             set { SetPropertyValue<Branch>(nameof(BranchID), ref fBranchID, value); }
         }
+        string fPassword;
+        public string Password
+        {
+            get { return fPassword; }
+            set { SetPropertyValue<string>(nameof(Password), ref fPassword, value); }
+        }
+        string fRole;
+        public string Role
+        {
+            get { return fRole; }
+            set { SetPropertyValue<string>(nameof(Role), ref fRole, value); }
+        }
         [Association(@"StoreReferencesEmployee")]
-        public XPCollection<Store> Stores { get { return GetCollection<Store>(nameof(Stores)); } }
+        public XPCollection<Warehouse_Receipt> Stores { get { return GetCollection<Warehouse_Receipt>(nameof(Stores)); } }
         [Association(@"OrderReferencesEmployee")]
-        public XPCollection<Order> Orders { get { return GetCollection<Order>(nameof(Orders)); } }
+        public XPCollection<Bill> Orders { get { return GetCollection<Bill>(nameof(Orders)); } }
+        [Association(@"Delivery_BillReferencesEmployee")]
+        public XPCollection<Delivery_Bill> Delivery_Bills { get { return GetCollection<Delivery_Bill>(nameof(Delivery_Bills)); } }
     }
 
 }

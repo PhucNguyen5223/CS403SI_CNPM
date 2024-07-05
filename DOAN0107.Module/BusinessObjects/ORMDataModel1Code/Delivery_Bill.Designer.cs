@@ -16,7 +16,7 @@ using System.Reflection;
 namespace DOAN0107.Module.BusinessObjects.ORMDataModel1
 {
 
-    public partial class Warehouse_Receipt : XPObject
+    public partial class Delivery_Bill : XPObject
     {
         string fEntryCode;
         public string EntryCode
@@ -25,24 +25,23 @@ namespace DOAN0107.Module.BusinessObjects.ORMDataModel1
             set { SetPropertyValue<string>(nameof(EntryCode), ref fEntryCode, value); }
         }
         Employee fEmployeeID;
-        [Association(@"StoreReferencesEmployee")]
+        [Association(@"Delivery_BillReferencesEmployee")]
         public Employee EmployeeID
         {
             get { return fEmployeeID; }
             set { SetPropertyValue<Employee>(nameof(EmployeeID), ref fEmployeeID, value); }
         }
-        Provider fProviderID;
-        [Association(@"StoreReferencesProvider")]
-        public Provider ProviderID
+        string fReason;
+        public string Reason
         {
-            get { return fProviderID; }
-            set { SetPropertyValue<Provider>(nameof(ProviderID), ref fProviderID, value); }
+            get { return fReason; }
+            set { SetPropertyValue<string>(nameof(Reason), ref fReason, value); }
         }
-        DateTime fDate;
-        public DateTime Date
+        DateTime fCreateTime;
+        public DateTime CreateTime
         {
-            get { return fDate; }
-            set { SetPropertyValue<DateTime>(nameof(Date), ref fDate, value); }
+            get { return fCreateTime; }
+            set { SetPropertyValue<DateTime>(nameof(CreateTime), ref fCreateTime, value); }
         }
         double fTotalPrice;
         public double TotalPrice
@@ -56,8 +55,8 @@ namespace DOAN0107.Module.BusinessObjects.ORMDataModel1
             get { return fTotalQuantity; }
             set { SetPropertyValue<short>(nameof(TotalQuantity), ref fTotalQuantity, value); }
         }
-        [Association(@"Store_DetailReferencesStore")]
-        public XPCollection<Warehouse_Receipt_Detail> Store_Details { get { return GetCollection<Warehouse_Receipt_Detail>(nameof(Store_Details)); } }
+        [Association(@"Delivery_Bill_DetailReferencesDelivery_Bill")]
+        public XPCollection<Delivery_Bill_Detail> Delivery_Bill_Details { get { return GetCollection<Delivery_Bill_Detail>(nameof(Delivery_Bill_Details)); } }
     }
 
 }

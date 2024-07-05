@@ -37,7 +37,7 @@ namespace DOAN0107.Module.BusinessObjects.ORMDataModel1
             set { SetPropertyValue<string>(nameof(Address), ref fAddress, value); }
         }
         [Association(@"StoreReferencesProvider")]
-        public XPCollection<Store> Stores { get { return GetCollection<Store>(nameof(Stores)); } }
+        public XPCollection<Warehouse_Receipt> Stores { get { return GetCollection<Warehouse_Receipt>(nameof(Stores)); } }
     }
 
 }
